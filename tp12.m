@@ -23,3 +23,11 @@ m3 = 16;
 x3 = 0 : L/m3 : L; 
 y3 = pcl_nd(f,m3);
 plot(x3, y3, 'm')
+
+figure(2) 
+plot(x1, y1'-yexacte(x1),'b')
+hold on; 
+plot(x2, y2'-yexacte(x2), 'g') 
+hold on; 
+plot(x3, y3' - yexacte(x3),'m')
+hold on; 

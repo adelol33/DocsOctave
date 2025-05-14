@@ -10,7 +10,7 @@ function y = pcl_nd(f,m)
   A(1,1) /= 2; % pour que le premier terme soit divisé par 2 
   for k = 1:m
     xk = (k-1)/m;
-    b(k) = h2*f(k); 
+    b(k) = h2*f(xk); 
   endfor
   b(1) /= 2; % vecteur ligne par défaut donc on prend la transoposée en dessous 
   y = A\b'; 

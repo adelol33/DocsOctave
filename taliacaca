@@ -1,0 +1,13 @@
+f=@(t,y) (cos(t.^2).*(exp(-t)));
+y0=0;T=5;h=0.1; t=0:h:T;
+
+yp = eulerp(f,y0,t);
+
+figure(1)
+plot(t,yp,'r')
+hold on;
+
+%vérification
+d=@(y,t) (cos(t.^2).*(exp(-t)));
+[y_exacte g t] = lsode(d,y0,t);
+plot(t,y_exacte,'g')
